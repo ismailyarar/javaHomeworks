@@ -11,12 +11,6 @@ public class Main {
         User user1 = new User(1, "ismyarar@gmail.com");
         User user2 = new User(2, "ogrenci2@udemy.com.tr");
 
-        CourseManager courseManager = new CourseManager();
-        courseManager.register(course1);
-
-        UserManager userManager = new UserManager();
-        userManager.register(user1);
-
         Course[] courses = {course1, course2};
         User[] users = {user1, user2};
 
@@ -28,6 +22,13 @@ public class Main {
         ) {
             System.out.println(user.email);
         }
+
+        CourseManager courseManager = new CourseManager();
+        courseManager.addCourse(course1);
+        courseManager.deleteCourse(course2);
+
+        UserManager userManager = new UserManager();
+        userManager.register(user1);
 
     }
 }
